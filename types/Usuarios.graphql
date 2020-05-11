@@ -1,0 +1,20 @@
+type Query{
+    Usuarios: [Usuario]
+}
+
+type Usuario{
+    IdUsuario: ID!
+    Nombre: String!
+    PrimerApellido: String!
+    SegundoApellido: String!
+    Contrasena: String!
+    TipoUsuario: String!
+    FechaNacimiento: String!
+    Direccion: String!
+    Telefono: String!
+    Correo: String!
+    Pais: String!
+    Genero: String!
+    NSS: String
+    NoControl: String
+}

@@ -1,0 +1,36 @@
+{
+  "name": "is-graphql-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-resolvers": "^1.4.2",
+    "body-parser": "^1.19.0",
+    "graphql-tools": "^5.0.0",
+    "merge-graphql-schemas": "^1.7.8",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "apollo-server": "^2.13.0",
+    "apollo-server-express": "^2.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.0.0",
+    "graphql-resolvers": "^0.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.3"
+  }
+}

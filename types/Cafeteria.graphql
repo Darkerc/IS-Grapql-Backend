@@ -1,0 +1,11 @@
+type Query{
+    Cafeterias: [Cafeteria]
+}
+
+type Cafeteria{
+    IdCafeteria: ID!
+    UsuarioProveedor: Usuario!
+    Edificio: String!
+    Foto: String
+    Telefono: String
+}
