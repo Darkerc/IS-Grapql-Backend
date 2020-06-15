@@ -1,0 +1,34 @@
+type Query{
+    getCitas(IdUsuarioNutricionista: ID!):[CitaUsuario]
+    getUsuariosCitas(IdUsuarioParticipante: ID!):[CitaNutricionista]
+}
+
+type Mutation{
+    crearCita(CitaInput: CitaInput!): CitaUsuario
+    eliminarCita(IdCita: ID!): Boolean!
+}
+
+type CitaUsuario{
+    IdCita: Int!
+    FKUsuarioParticipante: Int!
+    FKUsuarioNutricionista: Int!
+    FechaCita: String!
+    Motivo: String!
+    UsuarioParticipante: Usuario!
+}
+
+type CitaNutricionista{
+    IdCita: Int!
+    FKUsuarioParticipante: Int!
+    FKUsuarioNutricionista: Int!
+    FechaCita: String!
+    Motivo: String!
+    UsuarioNutricionista: Usuario!
+}
+
+input CitaInput{
+    FKUsuarioParticipante: Int!
+    FKUsuarioNutricionista: Int!
+    FechaCita: String!
+    Motivo: String!
+}

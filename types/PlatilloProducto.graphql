@@ -1,0 +1,13 @@
+type Query{
+    getPlatillosProducto(FKCafeteria: ID!):[PlatilloProducto]
+}
+
+type PlatilloProducto{
+    IdPlatillo: ID!
+    FKCafeteria: Int!
+    NombrePlatillo: String!
+    Calorias: Float!
+    Precio: Float!
+    PlatilloImg: String
+    Existencias: Int
+}

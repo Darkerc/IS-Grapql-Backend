@@ -1,0 +1,11 @@
+type Query{
+    getProductoPedido(IdPedido: ID!, IdPlatillo: ID!): ProductosPedido
+}
+
+type ProductosPedido{
+    IdProductosPedido: ID!
+    FKPedido: Int!
+    FKPlatillo: Int!
+    Unidades: Int!
+    Platillo: PlatilloProducto
+}

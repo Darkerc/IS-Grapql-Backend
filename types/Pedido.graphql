@@ -1,0 +1,28 @@
+type Query{
+    getPedidos(IdUsuarioParticipante: ID!): [Pedido]
+}
+
+type Mutation{
+    crearPedido(PedidoInput: PedidoInput!): Pedido
+}
+
+type Pedido{
+    IdPedido: ID!
+    FKUsuarioParticipante: Int!
+    PrecioTotal: Float!
+    CaloriasTotales: Float!
+    MetodoPago: String!
+    FechaEntrega:String
+    LugarEntrega: String
+    ProductosPedido: [ProductosPedido]
+}
+
+input PedidoInput{
+    FKUsuarioParticipante: Int!
+    PrecioTotal: Float!
+    CaloriasTotales: Float!
+    MetodoPago: String!
+    FechaEntrega: String
+    LugarEntrega: String
+    ProductosPedido: [ID]!
+}

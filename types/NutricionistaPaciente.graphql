@@ -1,0 +1,29 @@
+type Query{
+    Pacientes(IdUsuarioNutricionista: Int!): [NutricionistaPaciente]
+    getNotPacientes(IdUsuarioNutricionista: Int!): [Usuario]
+}
+
+type Mutation{
+    addPaciente(IdUsuarioNutricionista: ID!, IdUsuario: ID!):NutricionistaPaciente
+    deletePaciente(IdNutricionistaPaciente: ID!):Boolean!
+}
+
+type NutricionistaPaciente{
+    IdNutricionistaPaciente: Int!
+    FKUsuarioParticipante: Int!
+    FKUsuarioNutricionista: Int!
+    UsuarioParticipante: Usuario
+    UsuarioNutricionista: Usuario
+}
+
+type NutricionistaNotPaciente{
+    IdNutricionistaPaciente: Int!
+    FKUsuarioParticipante: Int!
+    FKUsuarioNutricionista: Int!
+    UsuarioParticipante: Usuario
+}
+
+type NutricionistaPacienteOutput{
+    IdNutricionistaPaciente: Int!
+    FKUsuarioParticipante: Int!
+}

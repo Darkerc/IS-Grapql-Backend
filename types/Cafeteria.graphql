@@ -1,10 +1,42 @@
 type Query{
-    Cafeterias: [Cafeteria]
+    CafeteriasUsuario: [CafeteriasUsuario]
+    CafeteriasPlatillos:[CafeteriaPlatillos]
+    getCafeteriasPlatillos(IdUsuarioProveedor: ID!): [CafeteriaPlatillos]
+}
+
+type Mutation{
+    insertarCafeteria(CafeteriaInput: CafeteriaInput):Cafeteria
+    getCafeteria(IdCafeteria: ID!): Cafeteria
 }
 
 type Cafeteria{
     IdCafeteria: ID!
-    UsuarioProveedor: Usuario!
+    FKUsuarioProveedor: Int!
+    Edificio: String!
+    Foto: String
+    Telefono: String
+}
+
+type CafeteriasUsuario{
+    IdCafeteria: ID!
+    FKUsuarioProveedor: Int!
+    Edificio: String!
+    Foto: String
+    Telefono: String
+    Usuario: Usuario
+}
+
+type CafeteriaPlatillos{
+    IdCafeteria: ID!
+    FKUsuarioProveedor: Int!
+    Edificio: String!
+    Foto: String
+    Telefono: String
+    Platillos:[PlatilloProducto]
+}
+
+input CafeteriaInput{
+    FKUsuarioProveedor: Int!
     Edificio: String!
     Foto: String
     Telefono: String

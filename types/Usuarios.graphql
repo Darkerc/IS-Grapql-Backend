@@ -1,5 +1,10 @@
 type Query{
-    Usuarios: [Usuario]
+    Usuarios: [Usuario],
+}
+
+type Mutation{
+    insertarUsuario(UsuarioInput: UsuarioInput): Usuario
+    ObtenerUsuario(Correo: String!, Contrasena: String!): Usuario
 }
 
 type Usuario{
@@ -15,6 +20,24 @@ type Usuario{
     Correo: String!
     Pais: String!
     Genero: String!
+    UsuarioImg: String
+    NSS: String
+    NoControl: String
+}
+
+input UsuarioInput{
+    Nombre: String!
+    PrimerApellido: String!
+    SegundoApellido: String!
+    Contrasena: String!
+    TipoUsuario: String!
+    FechaNacimiento: String!
+    Direccion: String!
+    Telefono: String!
+    Correo: String!
+    Pais: String!
+    Genero: String!
+    UsuarioImg: String
     NSS: String
     NoControl: String
 }
